@@ -36,33 +36,3 @@ function playSound(key) {
     }
 }
 
-// Function to open fullscreen
-function openFullscreen() {
-    const elem = document.documentElement;
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.mozRequestFullScreen) { /* Firefox */
-        elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE/Edge */
-        elem.msRequestFullscreen();
-    }
-}
-
-// Automatically request fullscreen on page load
-document.addEventListener('DOMContentLoaded', () => {
-    openFullscreen();
-});
-
-// Re-request fullscreen if exiting
-document.addEventListener('fullscreenchange', () => {
-    if (!document.fullscreenElement) {
-        openFullscreen();
-    }
-});
-
-// Handle fullscreen errors (e.g., due to user gestures)
-document.addEventListener('fullscreenerror', () => {
-    console.error('Failed to enter fullscreen mode.');
-});
