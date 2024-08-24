@@ -4,8 +4,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color:black;
-    /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+    /* background-color:rgb(23, 20, 20); */
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -13,10 +13,11 @@ body {
 /* Wrapper to contain the title and drum container */
 .wrapper {
     text-align: center;
-    border: 5px solid #333; /* Add border around the entire container */
+    border: 5px solid #50db06; 
+    /* Add border around the entire container */
     padding: 20px;
-    border-radius: 10px;
-    background-color: rgb(255, 0, 0);
+    border-radius: 30px;
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
 }
 
 /* Title styling */
@@ -24,7 +25,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px; /* Increased margin for better spacing */
-    color: rgb(158, 19, 19);
+    color: rgb(255, 255, 255);
 }
 
 /* Drum container grid layout */
@@ -103,28 +104,28 @@ body {
 /* Responsive styles for smaller devices */
 @media only screen and (max-width: 768px) {
     .drum-container {
-        grid-template-columns: repeat(3, 100px);
+        grid-template-columns: repeat(3, 130px);
         grid-gap: 15px;
     }
 
     .drum-pad {
-        width: 100px;
-        height: 100px;
-        line-height: 100px; /* Adjust line height for smaller pads */
+        width: 130px;
+        height: 130px;
+        line-height: 130px; /* Adjust line height for smaller pads */
         font-size: 18px;
     }
 }
 
 @media only screen and (max-width: 480px) {
     .drum-container {
-        grid-template-columns: repeat(3, 80px);
+        grid-template-columns: repeat(3, 100px);
         grid-gap: 10px;
     }
 
     .drum-pad {
-        width: 80px;
-        height: 80px;
-        line-height: 80px; /* Adjust line height for even smaller pads */
+        width: 100%;
+        height: 100%;
+        line-height: 100px; /* Adjust line height for even smaller pads */
         font-size: 14px;
     }
 }
