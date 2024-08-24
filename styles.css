@@ -63,16 +63,46 @@ body {
 }
 
 /* Individual pad background gradients */
-#pad1 { background-image: linear-gradient(45deg, #ff7e5f, #feb47b); }
-#pad2 { background-image: linear-gradient(45deg, #6a11cb, #2575fc); }
-#pad3 { background-image: linear-gradient(45deg, #43cea2, #185a9d); }
-#pad4 { background-image: linear-gradient(45deg, #ff6a00, #ee0979); }
-#pad5 { background-image: linear-gradient(45deg, #bdc3c7, #2c3e50); }
-#pad6 { background-image: linear-gradient(45deg, #ff512f, #dd2476); }
-#pad7 { background-image: linear-gradient(45deg, #e1eec3, #f05053); }
-#pad8 { background-image: linear-gradient(45deg, #2193b0, #6dd5ed); }
-#pad9 { background-image: linear-gradient(45deg, #7f00ff, #e100ff); }
-#pad10 { background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);; }
+#pad1 {
+    background-image: linear-gradient(45deg, #ff7e5f, #feb47b);
+}
+
+#pad2 {
+    background-image: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+
+#pad3 {
+    background-image: linear-gradient(45deg, #43cea2, #185a9d);
+}
+
+#pad4 {
+    background-image: linear-gradient(45deg, #ff6a00, #ee0979);
+}
+
+#pad5 {
+    background-image: linear-gradient(45deg, #bdc3c7, #2c3e50);
+}
+
+#pad6 {
+    background-image: linear-gradient(45deg, #ff512f, #dd2476);
+}
+
+#pad7 {
+    background-image: linear-gradient(45deg, #e1eec3, #f05053);
+}
+
+#pad8 {
+    background-image: linear-gradient(45deg, #2193b0, #6dd5ed);
+}
+
+#pad9 {
+    background-image: linear-gradient(45deg, #7f00ff, #e100ff);
+}
+
+#pad10 {
+    background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+    ;
+}
 
 /* Responsive styles for smaller devices */
 @media only screen and (max-width: 768px) {
@@ -90,7 +120,7 @@ body {
     .drum-pad {
         line-height: 100px;
         font-size: 14px;
-            width: 100px;
-            height: 100px;
+        width: 100px;
+        height: 100px;
     }
 }
