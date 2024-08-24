@@ -1,0 +1,112 @@
+/* Ensure full viewport height and center content */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Drum container grid layout */
+.drum-container {
+    display: grid;
+    grid-template-columns: repeat(3, 130px);
+    grid-gap: 20px;
+    justify-content: center; /* Center the grid */
+}
+
+/* Drum pad styles */
+.drum-pad {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 130px; /* Align text vertically */
+    font-size: 20px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    touch-action: manipulation; /* Ensures quick response to touch events */
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+/* Hover Effect */
+.drum-pad:hover {
+    transform: scale(1.1); /* Slightly increase the size */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
+    background-color: #777; /* Change background color */
+}
+
+/* Active (Click) Effect */
+.drum-pad:active {
+    transform: scale(0.95); /* Visual feedback on tap */
+    filter: brightness(0.9); /* Darken the pad slightly */
+}
+
+/* Individual pad background gradients */
+#pad1 {
+    background-image: linear-gradient(45deg, #ff7e5f, #feb47b);
+}
+
+#pad2 {
+    background-image: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+
+#pad3 {
+    background-image: linear-gradient(45deg, #43cea2, #185a9d);
+}
+
+#pad4 {
+    background-image: linear-gradient(45deg, #ff6a00, #ee0979);
+}
+
+#pad5 {
+    background-image: linear-gradient(45deg, #bdc3c7, #2c3e50);
+}
+
+#pad6 {
+    background-image: linear-gradient(45deg, #ff512f, #dd2476);
+}
+
+#pad7 {
+    background-image: linear-gradient(45deg, #e1eec3, #f05053);
+}
+
+#pad8 {
+    background-image: linear-gradient(45deg, #2193b0, #6dd5ed);
+}
+
+#pad9 {
+    background-image: linear-gradient(45deg, #7f00ff, #e100ff);
+}
+
+/* Responsive styles for smaller devices */
+@media only screen and (max-width: 768px) {
+    .drum-container {
+        grid-template-columns: repeat(3, 80px);
+        grid-gap: 15px;
+    }
+
+    .drum-pad {
+        width: 80px;
+        height: 80px;
+        line-height: 80px; /* Adjust line height for smaller pads */
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .drum-container {
+        grid-template-columns: repeat(3, 60px);
+        grid-gap: 10px;
+    }
+
+    .drum-pad {
+        width: 60px; 
+        height: 60px;
+        line-height: 60px; /* Adjust line height for even smaller pads */
+        font-size: 14px;
+    }
+}
