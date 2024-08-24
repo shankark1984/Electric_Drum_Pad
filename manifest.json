@@ -1,7 +1,7 @@
 
 {
-    "name": "My Web App",
-    "short_name": "WebApp",
+    "name": "Drum Pad",
+    "short_name": "DrumPad",
     "icons": [
       {
         "src": "icon-192x192.png",

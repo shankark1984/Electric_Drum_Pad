@@ -1,5 +1,5 @@
 // Define a version for your cache
-const CACHE_NAME = 'v004';
+const CACHE_NAME = 'v005';
 
 // List of assets to cache
 const assetsToCache = [
