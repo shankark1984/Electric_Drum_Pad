@@ -1,7 +1,4 @@
-// Define a version for your cache
-const CACHE_NAME = 'v009';
-
-// List of assets to cache
+const CACHE_NAME = 'v0010';
 const assetsToCache = [
     '/',
     '/index.html',
@@ -17,7 +14,7 @@ const assetsToCache = [
     '/sounds/crash.wav',
     '/sounds/ride.wav',
     '/sounds/clap.wav',
-    '/sounsa/hhopen.wav'
+    '/sounds/hhopen.wav'  // Add this if you use 'V' sound
 ];
 
 // Install event - caching the assets
@@ -29,7 +26,7 @@ self.addEventListener('install', event => {
                 return cache.addAll(assetsToCache);
             })
             .catch(error => {
-                console.error('Failed to open cache: ', error);
+                console.error('Failed to open cache:', error);
             })
     );
 });
@@ -47,10 +44,6 @@ self.addEventListener('activate', event => {
                     }
                 })
             );
-        })
-        .then(() => {
-            // Ensure that the service worker is controlling all clients immediately
-            return self.clients.claim();
         })
     );
 });
@@ -70,7 +63,7 @@ self.addEventListener('fetch', event => {
 
                 return fetch(fetchRequest).then(
                     networkResponse => {
-                        // Check if we received a valid response
+                        // Check if the response is valid
                         if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
                             return networkResponse;
                         }
@@ -84,7 +77,7 @@ self.addEventListener('fetch', event => {
                                 cache.put(event.request, responseToCache);
                             })
                             .catch(error => {
-                                console.error('Failed to cache response: ', error);
+                                console.error('Failed to cache response:', error);
                             });
 
                         return networkResponse;
@@ -92,9 +85,8 @@ self.addEventListener('fetch', event => {
                 );
             })
             .catch(error => {
-                console.error('Fetch failed; returning offline page instead.', error);
-                // You can return an offline page here if needed
-                // return caches.match('/offline.html');
+                console.error('Fetch failed:', error);
+                // Optionally, return a fallback response
             })
     );
 });
