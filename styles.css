@@ -29,7 +29,7 @@ body {
 /* Drum container grid layout */
 .drum-container {
     display: grid;
-    grid-template-columns: repeat(3, 130px);
+    grid-template-columns: repeat(5, 130px);
     grid-gap: 20px;
     justify-content: center;
 }
@@ -72,6 +72,7 @@ body {
 #pad7 { background-image: linear-gradient(45deg, #e1eec3, #f05053); }
 #pad8 { background-image: linear-gradient(45deg, #2193b0, #6dd5ed); }
 #pad9 { background-image: linear-gradient(45deg, #7f00ff, #e100ff); }
+#pad10 { background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);; }
 
 /* Responsive styles for smaller devices */
 @media only screen and (max-width: 768px) {
@@ -82,7 +83,7 @@ body {
 
 @media only screen and (max-width: 480px) {
     .drum-container {
-        grid-template-columns: repeat(3, 100px);
+        grid-template-columns: repeat(2, 130px);
         grid-gap: 10px;
     }
 

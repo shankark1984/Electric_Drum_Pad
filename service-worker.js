@@ -1,5 +1,5 @@
 // Define a version for your cache
-const CACHE_NAME = 'v005';
+const CACHE_NAME = 'v007';
 
 // List of assets to cache
 const assetsToCache = [
@@ -16,7 +16,8 @@ const assetsToCache = [
     '/sounds/tom3.wav',
     '/sounds/crash.wav',
     '/sounds/ride.wav',
-    '/sounds/clap.wav'
+    '/sounds/clap.wav',
+    '/sounsa/hhopen.wav'
 ];
 
 // Install event - caching the assets

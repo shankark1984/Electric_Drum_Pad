@@ -7,7 +7,8 @@ const sounds = {
     D: new Audio('sounds/tom3.wav'),
     Z: new Audio('sounds/crash.wav'),
     X: new Audio('sounds/ride.wav'),
-    C: new Audio('sounds/clap.wav')
+    C: new Audio('sounds/clap.wav'),
+    V: new Audio('sounds/hhopen.wav')
 };
 
 document.querySelectorAll('.drum-pad').forEach(pad => {
